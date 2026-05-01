@@ -3,3 +3,10 @@ def greet(name):
 
 
 print(greet("Nurzhan"))
+
+
+def sum(a, b):
+    return a + b
+
+
+print(sum(5, 5))
