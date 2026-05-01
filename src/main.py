@@ -5,8 +5,8 @@ def greet(name):
 print(greet("Nurzhan"))
 
 
-def sum(a, b):
+def add_numbers(a, b):
     return a + b
 
 
-print(sum(5, 5))
+print(add_numbers(5, 5))
