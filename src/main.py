@@ -24,3 +24,40 @@ print(type(name))
 print(type(is_developer))
 print(type(skills))
 print(type(person))
+
+age = 15
+
+if age >= 18:
+    print("Adult")
+elif 13 < age < 18:
+    print("Teenager")
+else:
+    print("Child")
+
+
+def get_age_category(age):
+    if age >= 18:
+        return "adult"
+    elif 13 < age < 18:
+        return "teenager"
+    else:
+        return "child"
+
+
+print(get_age_category(25))
+print(get_age_category(15))
+print(get_age_category(8))
+
+ages = [5, 12, 17, 20, 33, 8, 15]
+
+even = []
+odd = []
+
+for age in ages:
+    if age % 2 == 0:
+        even.append(age)
+    else:
+        odd.append(age)
+
+print(even)
+print(odd)
