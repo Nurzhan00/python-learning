@@ -121,3 +121,18 @@ print(result)  # вот здесь увидишь None
 
 result = add_return(5, 5)
 print(result)  # а здесь 10
+
+
+def get_element(numbers, index):
+    # index = 10
+    try:
+        # print(numbers[10])
+        return numbers[index]
+    except IndexError:
+        # print("None")
+        return None
+
+
+numbers = [1, 2, 3]
+print(get_element(numbers, 1))  # должно вернуть 2
+print(get_element(numbers, 10))  # должно вернуть None
