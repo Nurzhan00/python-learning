@@ -1,12 +1,12 @@
+from math_utils import add_numbers
+from employees import average_salary, employees
+
+
 def greet(name):
     return f"Привет, {name}! Я учусь Python."
 
 
 print(greet("Nurzhan"))
-
-
-def add_numbers(a, b):
-    return a + b
 
 
 print(add_numbers(5, 5))
@@ -105,29 +105,19 @@ person["city"] = "Almaty"
 print(person)
 
 
-def average_salary(employees):
-    # average = 0
-    sum_of_salary = 0
-    for employee in employees:
-        sum_of_salary += employee.get("salary")
-
-    average = sum_of_salary / len(employees)
-
-    employees_v2 = []
-
-    for employee in employees:
-        if employee.get("salary") > average:
-            employees_v2.append(employee)
-        else:
-            continue
-    return employees_v2
-
-
-employees = [
-    {"name": "Aibek", "salary": 150000},
-    {"name": "Dana", "salary": 280000},
-    {"name": "Nurzhan", "salary": 320000},
-    {"name": "Marat", "salary": 95000},
-    {"name": "Aliya", "salary": 210000},
-]
 print(average_salary(employees))
+
+
+def add_print(a, b):
+    print(a + b)
+
+
+def add_return(a, b):
+    return a + b
+
+
+result = add_print(5, 5)
+print(result)  # вот здесь увидишь None
+
+result = add_return(5, 5)
+print(result)  # а здесь 10
