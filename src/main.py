@@ -61,3 +61,38 @@ for age in ages:
 
 print(even)
 print(odd)
+
+skills = ["Python", "Git", "Docker"]
+
+for i, skill in enumerate(skills):
+    print(i, skill)
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+even = []
+odd = []
+dictt = {"even": even, "odd": odd}
+
+for age in ages:
+    if age % 2 == 0:
+        even.append(age)
+    else:
+        odd.append(age)
+
+print(dictt)
+
+
+def list_to_dict(numbers):
+    even = []
+    odd = []
+    dictt = {"even": even, "odd": odd}
+    for number in numbers:
+        if number % 2 == 0:
+            even.append(number)
+        else:
+            odd.append(number)
+    return dictt
+
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(list_to_dict(numbers))
