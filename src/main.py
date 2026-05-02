@@ -106,7 +106,7 @@ print(person)
 
 
 def average_salary(employees):
-    average = 0
+    # average = 0
     sum_of_salary = 0
     for employee in employees:
         sum_of_salary += employee.get("salary")
