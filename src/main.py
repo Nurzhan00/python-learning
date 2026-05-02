@@ -96,3 +96,38 @@ def list_to_dict(numbers):
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(list_to_dict(numbers))
+
+person = {"name": "Nurzhan", "age": 25, "skills": ["Python", "Git"]}
+
+print(person["name"])
+print(person.get("salary", 0))
+person["city"] = "Almaty"
+print(person)
+
+
+def average_salary(employees):
+    average = 0
+    sum_of_salary = 0
+    for employee in employees:
+        sum_of_salary += employee.get("salary")
+
+    average = sum_of_salary / len(employees)
+
+    employees_v2 = []
+
+    for employee in employees:
+        if employee.get("salary") > average:
+            employees_v2.append(employee)
+        else:
+            continue
+    return employees_v2
+
+
+employees = [
+    {"name": "Aibek", "salary": 150000},
+    {"name": "Dana", "salary": 280000},
+    {"name": "Nurzhan", "salary": 320000},
+    {"name": "Marat", "salary": 95000},
+    {"name": "Aliya", "salary": 210000},
+]
+print(average_salary(employees))
