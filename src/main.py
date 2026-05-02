@@ -136,3 +136,20 @@ def get_element(numbers, index):
 numbers = [1, 2, 3]
 print(get_element(numbers, 1))  # должно вернуть 2
 print(get_element(numbers, 10))  # должно вернуть None
+
+
+class Car:
+    def __init__(self, name, model, price):
+        self.name = name
+        self.model = model
+        self.price = price
+
+    def get_info(self):
+        return f"{self.name} {self.model} - ${self.price}"
+
+
+car1 = Car("Tesla", "X", 100000)
+car2 = Car("Hyundai", "Tucson", 30000)
+print(car1.name, car1.model, car1.price)
+print(car2.name, car2.model, car2.price)
+print(car1.get_info())
