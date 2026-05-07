@@ -153,3 +153,19 @@ car2 = Car("Hyundai", "Tucson", 30000)
 print(car1.name, car1.model, car1.price)
 print(car2.name, car2.model, car2.price)
 print(car1.get_info())
+
+
+class ElectricCar(Car):
+    def __init__(self, name, model, price, battery_range):
+        super().__init__(name, model, price)
+        self.battery_range = battery_range
+
+    def get_info(self):
+        return f"{self.name} {self.model} - ${self.price} {self.battery_range}"
+
+
+car1 = ElectricCar("Tesla", "X", 100000, 100)
+car2 = ElectricCar("Hyundai", "Tucson", 30000, 100)
+print(car1.name, car1.model, car1.price, car1.battery_range)
+print(car2.name, car2.model, car2.price, car2.battery_range)
+print(car1.get_info())
