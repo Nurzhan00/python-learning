@@ -169,3 +169,28 @@ car2 = ElectricCar("Hyundai", "Tucson", 30000, 100)
 print(car1.name, car1.model, car1.price, car1.battery_range)
 print(car2.name, car2.model, car2.price, car2.battery_range)
 print(car1.get_info())
+
+
+class BankAccount:
+    def __init__(self, balance):
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        if self.balance > amount:
+            self.balance -= amount
+        else:
+            return "Insufficient funds"
+
+    def get_balance(self):
+        return self.balance
+
+
+account = BankAccount(1000)
+print(account.get_balance())  # сколько?
+account.deposit(500)
+print(account.get_balance())  # сколько?
+print(account.withdraw(2000))  # что выведет?
+print(account.get_balance())  # сколько?
